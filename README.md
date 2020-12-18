@@ -15,6 +15,8 @@ python3 SmoothingTool.py InputFilename ColumnToBeSmoothed OutputName WhichFilter
 
 InputFilename is the text input file. It must contain the energy bins as the first column. The other columns contains the events for each of the bin spectra energies (first column). You can have as many columns as you want. Look at the ExampleSpectra_JUNO_MC.txt file, which contains spectra from MC simulations in JUNO: the first column is the reconstructed energy expressed in photoelectrons; the other columns are the rec. energy spectra from Be7 neutrinos, pep neutrinos, Bi210 decay, Po210 decay, U238 chain decays.
 
+The original and smoothed histograms are plotted in OutputName.pdf , while the latter content is printed also in OutputName.data
+
 1) SavitzkyGolay Filter   => WhichFilter = SG 	2 additional par: WindowLength PolDegree
 2) Gaussian Filter 	      => WhichFilter = GF 	1 additional par: Sigma
 3) Convolution		        => WhichFilter = CV 	2 additional par: WindowLength Shape
@@ -23,6 +25,7 @@ Examples:
 1) python3 SmoothingTool.py ExampleSpectra_JUNO_MC.txt 2 Output SG 81 3
 2) python3 SmoothingTool.py ExampleSpectra_JUNO_MC.txt 3 Output GF 21 
 3) python3 SmoothingTool.py ExampleSpectra_JUNO_MC.txt 4 Output CV 11 flat
+
 WindowLength (SG and CV) must be odd. 
 PolDegree (SG only) is the degree of interpolating polynomial.
 Sigma (GF only) is the width of the gaussian kernel.
