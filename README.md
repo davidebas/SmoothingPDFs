@@ -13,7 +13,7 @@ The three implemented algorithms are
 
 python3 SmoothingTool.py InputFilename ColumnToBeSmoothed OutputName WhichFilter Additional
 
-InputFilename is the text input file. It must contain the energy bins as the first column. The other columns contains the events for each of the bin spectra energies (first column). You can have as many columns as you want. Look at the ExampleSpectra_JUNO_MC.txt file, which contains spectra from MC simulations in JUNO: the first column is the reconstructed energy expressed in photoelectrons; the other columns are the rec. energy spectra from Be7 neutrinos, pep neutrinos, Bi210 decay, Po210 decay, U238 chain decays.
+InputFilename is the text input file. It must contain the energy bins as the first column. The other columns contains the events for each of the bin spectra energies (first column). You can have as many columns as you want. Look at the ExampleSpectra_JUNO_MC.txt file, which contains spectra from JUNO MC simulations: the first column is the reconstructed energy expressed in photoelectrons; the other columns are the rec. energy spectra from Be7 neutrinos, pep neutrinos, Bi210 decay, Po210 decay, U238 chain decays.
 
 The original and smoothed histograms are plotted in OutputName.pdf , while the latter content is printed also in OutputName.data
 
